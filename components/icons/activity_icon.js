@@ -3,8 +3,7 @@ import * as React from "react";
 function ActivityIcon(props) {
   return (
     <svg
-      aria-label="Hareket Ak\u0131\u015F\u0131"
-      className="prefix___8-yf5"
+      aria-label="Activity"
       fill="#262626"
       height={22}
       viewBox="0 0 48 48"

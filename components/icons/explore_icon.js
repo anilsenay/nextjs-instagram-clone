@@ -3,8 +3,7 @@ import * as React from "react";
 function ExploreIcon(props) {
   return (
     <svg
-      aria-label="Ki\u015Filer Bul"
-      className="prefix___8-yf5"
+      aria-label="Explore"
       fill="#262626"
       height={22}
       viewBox="0 0 48 48"

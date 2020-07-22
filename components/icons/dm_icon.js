@@ -4,7 +4,6 @@ function DmIcon(props) {
   return (
     <svg
       aria-label="Direct"
-      className="prefix___8-yf5"
       fill="#262626"
       height={22}
       viewBox="0 0 48 48"
