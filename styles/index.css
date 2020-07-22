@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 body {
   padding: 0;
   margin: 0;
@@ -17,6 +21,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  border-bottom: solid 1px #dbdbdb;
 }
 
 .header-container {
@@ -30,7 +35,7 @@ body {
 
 @media only screen and (min-width: 1024px) {
   .header-container {
-    width: 935px;
+    width: 975px;
   }
 }
 
@@ -65,4 +70,12 @@ body {
   position: absolute;
   top: 0;
   text-align: center;
+}
+
+.header-icons {
+  display: flex;
+  margin-left: auto;
+}
+.header-icon {
+  margin-right: 22px;
 }
