@@ -18,6 +18,12 @@ body {
   display: contents;
 }
 
+.box {
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
 .navigation {
   background: #fff;
   height: 54px;
@@ -89,9 +95,11 @@ body {
 
 .stories-container {
   border: solid 1px #dbdbdb;
+  border-radius: 3px;
   width: 614px;
   height: 116px;
   background-color: #fff;
+  margin-bottom: 26px;
 }
 .stories-feed {
   padding-top: 16px;
