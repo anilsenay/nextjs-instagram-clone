@@ -8,7 +8,7 @@ import ProfilePic from "./profile_pic";
 
 export default function Header() {
   return (
-    <nav className="navigation">
+    <nav className="navigation fixed z-20 top-0">
       <div className="header-container">
         <img src="../static/images/logo.png" className="header-logo" />
         <SearchBar />

@@ -8,13 +8,13 @@ export default function Home() {
   return (
     <Layout>
       <div className="homepage-container flex justify-center">
-        <div className="homepage-feed flex">
+        <div className="homepage-feed flex flex-col ">
           <Stories />
           {feed.map((item) => {
-            <FeedItem data={item} />;
+            return <FeedItem data={item} />;
           })}
         </div>
-        <div className="suggestions"></div>
+        <div className="suggestions hidden lg:flex"></div>
       </div>
     </Layout>
   );

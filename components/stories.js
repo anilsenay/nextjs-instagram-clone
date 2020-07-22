@@ -6,7 +6,6 @@ export default function Stories() {
   const stories = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   const [x, setX] = useState(0);
   const min_X = -((parseInt(stories.length) - 7) * 80 - 30);
-  console.log(min_X);
 
   const calculateTransform = (newX) => {
     if (newX < min_X) setX(min_X);
@@ -15,11 +14,11 @@ export default function Stories() {
   };
 
   return (
-    <Box className="stories-container">
+    <Box className="stories-container sm:full-width" border>
       <div className="stories-feed flex relative items-center">
         {x !== 0 && (
           <button
-            className="absolute stories-button left-0 z-10"
+            className="stories-button left-0 z-10"
             onClick={() => calculateTransform(x + 320)}
           >
             {"<"}
@@ -35,7 +34,7 @@ export default function Stories() {
         </div>
         {x !== min_X && stories.length > 7 && (
           <button
-            className="absolute stories-button right-0 z-10"
+            className=" stories-button right-0 z-10"
             onClick={() => calculateTransform(x - 320)}
           >
             {">"}

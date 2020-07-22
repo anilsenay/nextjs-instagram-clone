@@ -90,15 +90,12 @@ body {
 }
 
 .homepage-container {
-  padding-top: 30px;
+  padding-top: 84px;
 }
 
 .stories-container {
-  border: solid 1px #dbdbdb;
-  border-radius: 3px;
   width: 614px;
   height: 116px;
-  background-color: #fff;
   margin-bottom: 26px;
 }
 .stories-feed {
@@ -123,6 +120,7 @@ body {
   border-radius: 100%;
 }
 .stories-button {
+  position: absolute;
   background-color: white;
   border-radius: 100%;
   width: 24px;
@@ -136,4 +134,101 @@ body {
 .suggestions {
   width: 300px;
   height: 100%;
+}
+
+.feed-item-container {
+  max-width: 614px;
+  margin-bottom: 65px;
+  line-height: 24px;
+}
+.feed-item-header {
+  height: 60px;
+  background-color: white;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.feed-item-buttons-container {
+  width: 100%;
+  height: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.feed-item-buttons {
+  margin: 8px;
+}
+.feed-item-text {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 3px;
+}
+.text-l-m-16 {
+  margin-left: 16px;
+}
+.feed-item-description {
+  margin-right: 16px;
+  font-size: 14px;
+  margin-left: 16px;
+  overflow: hidden;
+}
+.feed-item-text-description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 1.5px;
+  overflow-wrap: break-word;
+}
+.feed-item-date-text {
+  font-size: 10px;
+  color: #9a9a9a;
+  margin-left: 16px;
+}
+.add-comment-container {
+  height: 56px;
+  padding: 18px;
+  width: 100%;
+  border-top: 1px solid #efefef;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+}
+.add-comment-input {
+  width: 100%;
+  border: 0;
+  resize: none;
+  margin-right: auto;
+  height: 18px;
+  background-color: transparent;
+}
+.add-comment-button {
+  color: #0095f6;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 614px) {
+  .homepage-feed {
+    width: 100%;
+  }
+  .stories-container {
+    width: 100%;
+  }
+  .feed-item-container {
+    margin-bottom: 12px;
+  }
+  .box {
+    border: 0px;
+    background-color: transparent;
+  }
+  .feed-item-header {
+    background-color: #fafafa;
+  }
+  .homepage-container {
+    padding-top: 64px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+  .add-comment-container {
+    display: none;
+  }
 }
