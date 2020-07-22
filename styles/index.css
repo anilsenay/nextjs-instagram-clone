@@ -9,6 +9,9 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .container {
@@ -78,4 +81,51 @@ body {
 }
 .header-icon {
   margin-right: 22px;
+}
+
+.homepage-container {
+  padding-top: 30px;
+}
+
+.stories-container {
+  border: solid 1px #dbdbdb;
+  width: 614px;
+  height: 116px;
+  background-color: #fff;
+}
+.stories-feed {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.story-username {
+  font-size: 12px;
+  margin-top: 2px;
+}
+.story-item {
+  width: 80px;
+  flex-shrink: 0;
+}
+.story-photo-container {
+  padding: 2px;
+  background: linear-gradient(45deg, #f37b12, #c62d90);
+  border-radius: 100%;
+}
+.stories-button {
+  background-color: white;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  margin: 10px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.suggestions {
+  width: 300px;
+  height: 100%;
 }
