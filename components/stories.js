@@ -15,7 +15,6 @@ export default function Stories({ stories }) {
 
   useEffect(() => {
     setMaxItems(parseInt(windowRef.current.clientWidth / 80));
-    console.log(windowRef.current.clientWidth);
   }, [windowRef]);
 
   const calculateTransform = (newX) => {
