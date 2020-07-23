@@ -28,7 +28,10 @@ export default function Stories() {
 
   return (
     <Box className="stories-container sm:full-width" border={true}>
-      <div className="stories-feed flex relative items-center" ref={windowRef}>
+      <div
+        className="stories-feed overflow-y-hidden py-4 px-2 flex relative items-center"
+        ref={windowRef}
+      >
         {x !== 0 && (
           <button
             className="stories-button left-0 z-10"

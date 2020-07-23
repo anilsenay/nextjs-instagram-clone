@@ -12,6 +12,7 @@ body {
   background-color: #fafafa;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
 }
 
 .text-14-bold {
@@ -21,7 +22,7 @@ body {
 }
 .text-14-light {
   font-size: 14px;
-  line-height: 18px;
+  line-height: 22px;
 }
 .text-12-bold {
   font-size: 12px;
@@ -36,6 +37,7 @@ body {
 .text-blue {
   color: #0095f6;
 }
+
 .container {
   display: contents;
 }
@@ -64,26 +66,12 @@ body {
   padding-right: 20px;
 }
 
-@media only screen and (min-width: 1024px) {
-  .header-container {
-    width: 975px;
-  }
-}
-
 .header-logo {
   margin-top: 7px;
   width: 103px;
   height: 29px;
 }
 
-.search-bar {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  margin-left: auto;
-}
 .search-input {
   text-align: center;
   height: 28px;
@@ -96,17 +84,7 @@ body {
   border-radius: 2px;
   font-size: 14px;
 }
-.search-text {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  text-align: center;
-}
 
-.header-icons {
-  display: flex;
-  margin-left: auto;
-}
 .header-icon {
   margin-right: 22px;
 }
@@ -115,36 +93,21 @@ body {
   padding-top: 84px;
 }
 
-.homepage-feed {
-  margin-right: 30px;
-}
-
 .stories-container {
   width: 614px;
   height: 116px;
   margin-bottom: 26px;
 }
 .stories-feed {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  overflow-y: hidden;
   scrollbar-width: none;
-  padding-left: 10px;
-  padding-right: 10px;
 }
-.story-username {
-  font-size: 12px;
-  margin-top: 2px;
-}
-.story-item {
-  width: 80px;
-  flex-shrink: 0;
-}
+
 .story-photo-container {
   padding: 2px;
   background: linear-gradient(45deg, #f37b12, #c62d90);
   border-radius: 100%;
 }
+
 .stories-button {
   position: absolute;
   background-color: white;
@@ -157,11 +120,6 @@ body {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-.suggestions {
-  width: 300px;
-  height: 100%;
-}
-
 .feed-item-container {
   max-width: 614px;
   margin-bottom: 60px;
@@ -171,35 +129,7 @@ body {
 }
 .feed-item-header {
   height: 60px;
-  background-color: white;
   width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.feed-item-buttons-container {
-  width: 100%;
-  height: 40px;
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-top: 8px;
-}
-.feed-item-buttons {
-  margin: 8px;
-}
-.feed-item-text {
-  font-size: 14px;
-  font-weight: bold;
-  margin-right: 3px;
-}
-.text-l-m-16 {
-  margin-left: 16px;
-}
-.feed-item-description {
-  margin-right: 16px;
-  font-size: 14px;
-  margin-left: 16px;
-  overflow: hidden;
 }
 .feed-item-text-description {
   text-overflow: ellipsis;
@@ -235,35 +165,18 @@ body {
   margin-right: 15px;
   font-size: 14px;
 }
-.add-comment-button {
-  color: #0095f6;
-  font-size: 14px;
+
+.suggestions {
+  width: 300px;
+  height: 100%;
 }
 
-.suggestion-item {
-  height: auto;
-  padding-bottom: 8px;
-  padding-top: 8px;
-}
 .right-bar-user-info {
   height: auto;
   margin-bottom: 10px;
   margin-top: 18px;
 }
-.user-info-texts {
-  margin-left: 20px;
-}
-.suggestion-user-info {
-  margin-left: 12px;
-}
 
-.feed-photo-images-container {
-  width: 100%;
-}
-.hide-photo {
-  position: absolute;
-  overflow: hidden;
-}
 .slide-dots {
   left: 49%;
   bottom: -22px;
@@ -274,6 +187,12 @@ body {
   background-color: #a8a8a8;
   border-radius: 6px;
   margin-right: 4px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header-container {
+    width: 975px;
+  }
 }
 
 @media only screen and (max-width: 614px) {

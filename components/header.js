@@ -13,7 +13,7 @@ export default function Header() {
       <div className="header-container">
         <img src="../static/images/logo.png" className="header-logo" />
         <SearchBar />
-        <div className="header-icons">
+        <div className="header-icons flex ml-auto">
           <Clickable>
             <HomeIcon className="header-icon" />
           </Clickable>

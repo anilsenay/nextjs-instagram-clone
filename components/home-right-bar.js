@@ -7,7 +7,7 @@ export default function HomeRightBar({ data }) {
     <div className="suggestions hidden lg:flex lg:flex-col">
       <div className="right-bar-user-info flex items-center">
         <ProfilePic size={56} />
-        <div className="user-info-texts flex flex-col">
+        <div className="user-info-texts ml-5 flex flex-col">
           <a
             href="#"
             className="text-14-bold"

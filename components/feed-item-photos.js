@@ -33,7 +33,7 @@ export default function FeedItemPhotos({ photos }) {
         </button>
       )}
       <div
-        className="feed-photo-images-container flex relative transition ease-linear duration-200"
+        className="feed-photo-images-container w-full flex relative transition ease-linear duration-200"
         style={{ transform: `translate(${photosX}px, 0px)` }}
       >
         <img
@@ -46,7 +46,7 @@ export default function FeedItemPhotos({ photos }) {
             return (
               index !== 0 && (
                 <img
-                  className="flex-1 object-fill hide-photo"
+                  className="flex-1 object-fill hide-photo absolute overflow-hidden"
                   style={{
                     width: photoRef.current.width,
                     transform: `translate(${

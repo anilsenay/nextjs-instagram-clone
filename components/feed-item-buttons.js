@@ -8,16 +8,16 @@ import Clickable from "./clickable";
 export default function FeedItemButtons({ ...props }) {
   return (
     <div {...props}>
-      <Clickable className="feed-item-buttons">
+      <Clickable className="feed-item-buttons m-2">
         <ActivityIcon height={24} width={24} size={24} />
       </Clickable>
-      <Clickable className="feed-item-buttons">
+      <Clickable className="feed-item-buttons m-2">
         <CommentIcon height={24} width={24} />
       </Clickable>
-      <Clickable className="feed-item-buttons">
+      <Clickable className="feed-item-buttons m-2">
         <DmIcon height={24} width={24} />
       </Clickable>
-      <Clickable className="feed-item-buttons ml-auto">
+      <Clickable className="feed-item-buttons m-2 ml-auto">
         <SaveIcon height={24} width={24} />
       </Clickable>
     </div>

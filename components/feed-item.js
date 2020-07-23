@@ -18,13 +18,13 @@ export default function FeedItem({ data }) {
     <Box className="feed-item-container flex flex-col">
       <FeedItemHeader image={data?.image} username={data?.username} />
       <FeedItemPhotos photos={data.photos || photos} />
-      <FeedItemButtons className="feed-item-buttons-container flex items-center" />
-      <a href="#" className="feed-item-text text-l-m-16">
+      <FeedItemButtons className="feed-item-buttons-container w-full h-10 pl-2 pr-2 mt-2 flex items-center" />
+      <a href="#" className="feed-item-text text-14-bold mr-1 ml-4">
         {data?.likes || "0"} likes
       </a>
       <FeedItemComment data={data?.userComment} />
       <a
-        className="feed-item-description"
+        className="overflow-hidden mx-4 text-14-light"
         style={{ color: "#9a9a9a", display: "flex" }}
         href="#"
       >

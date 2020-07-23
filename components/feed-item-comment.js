@@ -4,8 +4,8 @@ export default function FeedItemComment({ data }) {
   const [showMore, setShowMore] = useState(data?.description.length < 80);
 
   return (
-    <div className="feed-item-description inherit">
-      <a href="#" className="feed-item-text">
+    <div className="overflow-hidden mx-4 text-14-light inherit">
+      <a href="#" className="text-14-bold mr-1">
         {data?.username || "username"}
       </a>
       <span className={!showMore ? "feed-item-text-description " : "inherit"}>

@@ -4,9 +4,9 @@ import MoreSettings from "./icons/more_icon";
 
 export default function FeedItemHeader({ username, image }) {
   return (
-    <div className="feed-item-header flex items-center">
+    <div className="feed-item-header pl-4 pr-4 bg-white flex items-center">
       <ProfilePic src={image} size={32} />
-      <a className="feed-item-header-text feed-item-text text-l-m-16" href="">
+      <a className="feed-item-header-text text-14-bold mr-1 ml-4" href="">
         {username || "username"}
       </a>
       <button className="ml-auto flex">

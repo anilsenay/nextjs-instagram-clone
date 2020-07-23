@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="homepage-container flex justify-center">
-        <div className="homepage-feed flex flex-col ">
+        <div className="homepage-feed lg:mr-8 flex flex-col ">
           <Stories />
           {feed.map((item) => {
             return <FeedItem data={item} key={item} />;

@@ -19,7 +19,7 @@ export default function AddComment() {
         }}
       ></textarea>
       <button
-        className="add-comment-button"
+        className="add-comment-button text-14-light text-blue"
         style={{ opacity: isTyped ? 1 : 0.3 }}
       >
         Share
