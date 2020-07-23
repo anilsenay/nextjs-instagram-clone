@@ -18,7 +18,7 @@ export default function ProfilePic({
           width: size,
           height: size,
           borderRadius: size,
-          border: "2px solid white",
+          border: border && "2px solid white",
         }}
       ></img>
     </span>

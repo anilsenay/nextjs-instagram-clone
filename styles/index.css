@@ -14,6 +14,28 @@ body {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+.text-14-bold {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+}
+.text-14-light {
+  font-size: 14px;
+  line-height: 18px;
+}
+.text-12-bold {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: bold;
+}
+.text-12-light {
+  font-size: 12px;
+  line-height: 14px;
+  color: #8e8e8e;
+}
+.text-blue {
+  color: #0095f6;
+}
 .container {
   display: contents;
 }
@@ -93,6 +115,10 @@ body {
   padding-top: 84px;
 }
 
+.homepage-feed {
+  margin-right: 30px;
+}
+
 .stories-container {
   width: 614px;
   height: 116px;
@@ -138,7 +164,7 @@ body {
 
 .feed-item-container {
   max-width: 614px;
-  margin-bottom: 65px;
+  margin-bottom: 60px;
   line-height: 24px;
 }
 .feed-item-header {
@@ -211,6 +237,23 @@ body {
   font-size: 14px;
 }
 
+.suggestion-item {
+  height: auto;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+.right-bar-user-info {
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: 18px;
+}
+.user-info-texts {
+  margin-left: 20px;
+}
+.suggestion-user-info {
+  margin-left: 12px;
+}
+
 @media only screen and (max-width: 614px) {
   .homepage-feed {
     width: 100%;
@@ -232,6 +275,9 @@ body {
     padding-top: 64px;
     padding-left: 1px;
     padding-right: 1px;
+  }
+  .homepage-feed {
+    margin-right: 0px;
   }
   .add-comment-container {
     display: none;
