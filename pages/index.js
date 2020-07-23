@@ -11,7 +11,7 @@ export default function Home() {
         <div className="homepage-feed flex flex-col ">
           <Stories />
           {feed.map((item) => {
-            return <FeedItem data={item} />;
+            return <FeedItem data={item} key={item} />;
           })}
         </div>
         <div className="suggestions hidden lg:flex"></div>

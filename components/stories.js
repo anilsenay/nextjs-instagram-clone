@@ -14,7 +14,7 @@ export default function Stories() {
   };
 
   return (
-    <Box className="stories-container sm:full-width" border>
+    <Box className="stories-container sm:full-width" border={true}>
       <div className="stories-feed flex relative items-center">
         {x !== 0 && (
           <button
