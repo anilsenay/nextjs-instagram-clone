@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from "react";
 export default function AddComment() {
   const changeRef = useRef(null);
   const [textAreaSize, setAreaSize] = useState(18);
+  const [isTyped, setTyped] = useState(false);
 
   return (
     <form method="POST" className="add-comment-container">
@@ -12,9 +13,17 @@ export default function AddComment() {
         placeholder="Add Comment..."
         aria-label="Add Comment..."
         ref={changeRef}
-        onChange={() => setAreaSize(changeRef.current.scrollHeight)}
+        onChange={(e) => {
+          setAreaSize(changeRef.current.scrollHeight);
+          setTyped(e.target.value.length > 0);
+        }}
       ></textarea>
-      <button className="add-comment-button">Share</button>
+      <button
+        className="add-comment-button"
+        style={{ opacity: isTyped ? 1 : 0.3 }}
+      >
+        Share
+      </button>
     </form>
   );
 }

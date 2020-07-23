@@ -3,7 +3,7 @@ import ProfilePic from "./profile_pic";
 
 export default function SuggestionItem({ data }) {
   return (
-    <div className="suggestion-item flex">
+    <div className="suggestion-item flex items-center">
       <ProfilePic size={32} />
       <div className="suggestion-user-info flex flex-col">
         <span

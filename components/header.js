@@ -5,6 +5,7 @@ import DmIcon from "./icons/dm_icon";
 import ExploreIcon from "./icons/explore_icon";
 import ActivityIcon from "./icons/activity_icon";
 import ProfilePic from "./profile_pic";
+import Clickable from "./clickable";
 
 export default function Header() {
   return (
@@ -13,11 +14,21 @@ export default function Header() {
         <img src="../static/images/logo.png" className="header-logo" />
         <SearchBar />
         <div className="header-icons">
-          <HomeIcon className="header-icon" />
-          <DmIcon className="header-icon" />
-          <ExploreIcon className="header-icon" />
-          <ActivityIcon className="header-icon" />
-          <ProfilePic size={22} />
+          <Clickable>
+            <HomeIcon className="header-icon" />
+          </Clickable>
+          <Clickable>
+            <DmIcon className="header-icon" />
+          </Clickable>
+          <Clickable>
+            <ExploreIcon className="header-icon" />
+          </Clickable>
+          <Clickable>
+            <ActivityIcon className="header-icon" />
+          </Clickable>
+          <Clickable>
+            <ProfilePic size={22} />
+          </Clickable>
         </div>
       </div>
     </nav>

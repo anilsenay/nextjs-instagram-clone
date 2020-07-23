@@ -1,11 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import StoryItem from "./story-item";
 import Box from "./box";
+import Clickable from "./clickable";
 
 export default function Stories() {
   const stories = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   const [x, setX] = useState(0);
-  const min_X = -((parseInt(stories.length) - 7) * 80 - 30);
+  const [maxItems, setMaxItems] = useState(7);
+
+  const min_X = -(
+    (parseInt(stories.length) - maxItems) * 80 +
+    (5 - maxItems) * 15
+  );
+
+  const windowRef = useRef(null);
+
+  useEffect(() => {
+    setMaxItems(parseInt(windowRef.current.clientWidth / 80));
+    console.log(windowRef.current.clientWidth);
+  }, [windowRef]);
 
   const calculateTransform = (newX) => {
     if (newX < min_X) setX(min_X);
@@ -15,7 +28,7 @@ export default function Stories() {
 
   return (
     <Box className="stories-container sm:full-width" border={true}>
-      <div className="stories-feed flex relative items-center">
+      <div className="stories-feed flex relative items-center" ref={windowRef}>
         {x !== 0 && (
           <button
             className="stories-button left-0 z-10"
@@ -29,10 +42,14 @@ export default function Stories() {
           style={{ transform: `translate(${x}px, 0px)` }}
         >
           {stories.map((item) => {
-            return <StoryItem data={item} key={item} />;
+            return (
+              <Clickable>
+                <StoryItem data={item} key={item} />
+              </Clickable>
+            );
           })}
         </div>
-        {x !== min_X && stories.length > 7 && (
+        {x !== min_X && stories.length > maxItems && (
           <button
             className=" stories-button right-0 z-10"
             onClick={() => calculateTransform(x - 320)}

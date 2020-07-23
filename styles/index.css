@@ -182,6 +182,7 @@ body {
   height: 40px;
   padding-left: 8px;
   padding-right: 8px;
+  margin-top: 8px;
 }
 .feed-item-buttons {
   margin: 8px;
@@ -265,7 +266,7 @@ body {
 }
 .slide-dots {
   left: 49%;
-  bottom: -20px;
+  bottom: -22px;
 }
 .slide-dot {
   height: 6px;
