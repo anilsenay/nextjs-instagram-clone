@@ -11,7 +11,9 @@ export default function Header() {
   return (
     <nav className="navigation fixed z-20 top-0">
       <div className="header-container">
-        <img src="../static/images/logo.png" className="header-logo" />
+        <Clickable href="/">
+          <img src="../static/images/logo.png" className="header-logo" />
+        </Clickable>
         <SearchBar />
         <div className="header-icons flex ml-auto">
           <Clickable href="/">
@@ -26,9 +28,7 @@ export default function Header() {
           <Clickable href="/activity">
             <ActivityIcon className="header-icon" />
           </Clickable>
-          <Clickable href="/profile">
-            <ProfilePic size={22} />
-          </Clickable>
+          <ProfilePic href="/profile" size={22} />
         </div>
       </div>
     </nav>

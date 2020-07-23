@@ -5,6 +5,7 @@ import FeedItemButtons from "./feed-item-buttons";
 import FeedItemComment from "./feed-item-comment";
 import AddComment from "./add_comment";
 import FeedItemPhotos from "./feed-item-photos";
+import Router from "next/router";
 
 export default function FeedItem({ data }) {
   const photos = [
@@ -24,15 +25,22 @@ export default function FeedItem({ data }) {
       </a>
       <FeedItemComment data={data?.userComment} />
       <a
-        className="overflow-hidden mx-4 text-14-light"
+        className="overflow-hidden mx-4 text-14-light cursor-pointer"
         style={{ color: "#9a9a9a", display: "flex" }}
-        href="#"
+        onClick={() =>
+          Router.push("/post/[pid]", `/post/${data?.pid || "post-test"}`)
+        }
       >
         Wiew all {data?.commentCount || "0"} comment
       </a>
       <FeedItemComment data={{ description: "Hellooo, nice pic!" }} />
       <FeedItemComment data={{ description: "Wow, you look nice!" }} />
-      <a href="#" className="feed-item-date-text">
+      <a
+        className="feed-item-date-text cursor-pointer"
+        onClick={() =>
+          Router.push("/post/[pid]", `/post/${data?.pid || "post-test"}`)
+        }
+      >
         12 HOURS AGO
       </a>
       <AddComment />

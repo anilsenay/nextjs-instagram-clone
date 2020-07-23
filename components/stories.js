@@ -45,11 +45,7 @@ export default function Stories() {
           style={{ transform: `translate(${x}px, 0px)` }}
         >
           {stories.map((item) => {
-            return (
-              <Clickable>
-                <StoryItem data={item} key={item} />
-              </Clickable>
-            );
+            return <StoryItem data={item} key={item} />;
           })}
         </div>
         {x !== min_X && stories.length > maxItems && (

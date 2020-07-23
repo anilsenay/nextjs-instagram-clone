@@ -1,6 +1,7 @@
 import React from "react";
 import ProfilePic from "./profile_pic";
 import RightBarSuggestions from "./right-bar-suggestions";
+import UsernameText from "./username-text";
 
 export default function HomeRightBar({ data }) {
   return (
@@ -8,13 +9,10 @@ export default function HomeRightBar({ data }) {
       <div className="right-bar-user-info flex items-center">
         <ProfilePic size={56} />
         <div className="user-info-texts ml-5 flex flex-col">
-          <a
-            href="#"
-            className="text-14-bold"
+          <UsernameText
             style={{ paddingBottom: 2, paddingTop: 2 }}
-          >
-            {data?.username || "username"}
-          </a>
+            username="username"
+          />
           <span className="text-12-light">{data?.name || "Name Surname"}</span>
         </div>
       </div>
