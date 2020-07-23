@@ -14,19 +14,19 @@ export default function Header() {
         <img src="../static/images/logo.png" className="header-logo" />
         <SearchBar />
         <div className="header-icons flex ml-auto">
-          <Clickable>
+          <Clickable href="/">
             <HomeIcon className="header-icon" />
           </Clickable>
-          <Clickable>
+          <Clickable href="/messages">
             <DmIcon className="header-icon" />
           </Clickable>
-          <Clickable>
+          <Clickable href="/explore">
             <ExploreIcon className="header-icon" />
           </Clickable>
-          <Clickable>
+          <Clickable href="/activity">
             <ActivityIcon className="header-icon" />
           </Clickable>
-          <Clickable>
+          <Clickable href="/profile">
             <ProfilePic size={22} />
           </Clickable>
         </div>
