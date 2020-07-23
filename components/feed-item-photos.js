@@ -70,16 +70,20 @@ export default function FeedItemPhotos({ photos }) {
           {">"}
         </button>
       )}
-      <div className="slide-dots absolute flex">
-        {photos.map((item, index) => {
-          return (
-            <div
-              className="slide-dot flex justify-center"
-              style={{ backgroundColor: index === selectedPhoto && "#0095F6" }}
-            ></div>
-          );
-        })}
-      </div>
+      {photos.length > 1 && (
+        <div className="slide-dots absolute flex">
+          {photos.map((item, index) => {
+            return (
+              <div
+                className="slide-dot flex justify-center"
+                style={{
+                  backgroundColor: index === selectedPhoto && "#0095F6",
+                }}
+              ></div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
