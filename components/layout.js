@@ -5,7 +5,7 @@ export default function Layout({ children }) {
   return (
     <div className="container">
       <Header />
-      {children}
+      <div className="homepage-container flex justify-center">{children}</div>
     </div>
   );
 }

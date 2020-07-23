@@ -10,7 +10,7 @@ export default function ProfilePic({
   ...props
 }) {
   return (
-    <span {...props}>
+    <span {...props} onClick={() => Router.push("/[pid]", `/${username}`)}>
       <img
         alt={`${username}'s profile pic`}
         data-testid="user-avatar"

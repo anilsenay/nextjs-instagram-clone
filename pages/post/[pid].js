@@ -5,5 +5,9 @@ export default function Pid() {
   const router = useRouter();
   const { pid } = router.query;
 
-  return <div>{pid}</div>;
+  return (
+    <Layout>
+      <div>{pid}</div>
+    </Layout>
+  );
 }

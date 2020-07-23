@@ -11,7 +11,6 @@ export default function SuggestionItem({ data }) {
         <UsernameText
           username="username"
           className="text-14-bold cursor-pointer"
-          style={{ paddingBottom: 2, paddingTop: 2 }}
         />
         <span className="text-12-light">
           {data?.info || "Followed by username + 99 more"}
