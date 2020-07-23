@@ -2,11 +2,10 @@ import React from "react";
 import ProfilePic from "./profile_pic";
 import RightBarSuggestions from "./right-bar-suggestions";
 import UsernameText from "./username-text";
-import { useRecoilState } from "recoil";
-import { loginUser } from "../atoms/globalState";
+import { useLoginUserData } from "../hooks/global_hook";
 
 export default function HomeRightBar({ data }) {
-  const [loginUserData, setLoginUserData] = useRecoilState(loginUser);
+  const loginUserData = useLoginUserData();
 
   return (
     <div className="suggestions hidden lg:flex lg:flex-col">

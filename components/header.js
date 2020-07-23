@@ -6,12 +6,10 @@ import ExploreIcon from "./icons/explore_icon";
 import ActivityIcon from "./icons/activity_icon";
 import ProfilePic from "./profile_pic";
 import Clickable from "./clickable";
-import { useRecoilState } from "recoil";
-import { loginUser } from "../atoms/globalState";
+import { useLoginUserData } from "../hooks/global_hook";
 
 export default function Header({ user }) {
-  const [loginUserData, setLoginUserData] = useRecoilState(loginUser);
-
+  const loginUserData = useLoginUserData();
   return (
     <nav className="navigation fixed z-20 top-0">
       <div className="header-container">
