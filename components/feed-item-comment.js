@@ -6,7 +6,7 @@ export default function FeedItemComment({ data }) {
 
   return (
     <div className="overflow-hidden mx-4 text-14-light inherit">
-      <UsernameText username="username" />
+      <UsernameText username={data.username} />
       <span className={!showMore ? "feed-item-text-description " : "inherit"}>
         {data?.description ||
           "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"}

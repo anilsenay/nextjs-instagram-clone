@@ -9,7 +9,7 @@ export default function FeedItemHeader({ username, image }) {
       <ProfilePic src={image} size={32} />
       <UsernameText
         className="feed-item-header-text text-14-bold mr-1 ml-4 cursor-pointer"
-        username={"username"}
+        username={username || "username"}
       />
       <button className="ml-auto flex">
         <MoreSettings />

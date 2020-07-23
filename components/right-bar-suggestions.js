@@ -1,8 +1,7 @@
 import React from "react";
 import SuggestionItem from "./suggestion-item";
 
-export default function RightBarSuggestions() {
-  const suggestions = [1, 2, 3, 4, 5];
+export default function RightBarSuggestions({ data }) {
   return (
     <div className="flex flex-col">
       <div className="suggestions-header flex" style={{ marginTop: 12 }}>
@@ -17,7 +16,7 @@ export default function RightBarSuggestions() {
         className="right-bar-suggestions"
         style={{ paddingBottom: 8, paddingTop: 8 }}
       >
-        {suggestions.map((item) => {
+        {data.map((item) => {
           return <SuggestionItem data={item} />;
         })}
       </div>
