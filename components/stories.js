@@ -1,10 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import StoryItem from "./story-item";
 import Box from "./box";
-import Clickable from "./clickable";
 
-export default function Stories() {
-  const stories = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+export default function Stories({ stories }) {
   const [x, setX] = useState(0);
   const [maxItems, setMaxItems] = useState(7);
 

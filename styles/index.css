@@ -107,6 +107,12 @@ body {
   background: linear-gradient(45deg, #f37b12, #c62d90);
   border-radius: 100%;
 }
+.story-username {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 80px;
+  text-align: center;
+}
 
 .stories-button {
   position: absolute;

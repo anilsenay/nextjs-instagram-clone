@@ -17,7 +17,7 @@ export default function StoryItem({ data }) {
         ></ProfilePic>
       </div>
       <UsernameText
-        username="username"
+        username={data?.username || "username"}
         className="story-username text-black text-12-light mt-1"
       />
     </div>

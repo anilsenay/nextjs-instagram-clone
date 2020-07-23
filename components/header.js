@@ -7,7 +7,7 @@ import ActivityIcon from "./icons/activity_icon";
 import ProfilePic from "./profile_pic";
 import Clickable from "./clickable";
 
-export default function Header() {
+export default function Header({ user }) {
   return (
     <nav className="navigation fixed z-20 top-0">
       <div className="header-container">
@@ -28,7 +28,11 @@ export default function Header() {
           <Clickable href="/activity">
             <ActivityIcon className="header-icon" />
           </Clickable>
-          <ProfilePic href="/profile" size={22} />
+          <ProfilePic
+            src={user?.image}
+            username={user?.username || "anilsenay"}
+            size={22}
+          />
         </div>
       </div>
     </nav>
