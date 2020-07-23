@@ -25,7 +25,7 @@ export default function Stories({ stories }) {
   };
 
   return (
-    <Box className="stories-container sm:full-width" border={true}>
+    <Box className="stories-container sm:full-width" border>
       <div
         className="stories-feed overflow-y-hidden py-4 px-2 flex relative items-center"
         ref={windowRef}
@@ -43,7 +43,7 @@ export default function Stories({ stories }) {
           style={{ transform: `translate(${x}px, 0px)` }}
         >
           {stories.map((item) => {
-            return <StoryItem data={item} key={item} />;
+            return <StoryItem data={item} key={item.username} />;
           })}
         </div>
         {x !== min_X && stories.length > maxItems && (

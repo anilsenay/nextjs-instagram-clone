@@ -46,6 +46,7 @@ export default function FeedItemPhotos({ photos }) {
             return (
               index !== 0 && (
                 <img
+                  key={index}
                   className="flex-1 object-fill hide-photo absolute overflow-hidden"
                   style={{
                     width: photoRef.current.width,
@@ -75,6 +76,7 @@ export default function FeedItemPhotos({ photos }) {
           {photos.map((item, index) => {
             return (
               <div
+                key={index}
                 className="slide-dot flex justify-center"
                 style={{
                   backgroundColor: index === selectedPhoto && "#0095F6",

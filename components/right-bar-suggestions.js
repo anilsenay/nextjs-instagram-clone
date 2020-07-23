@@ -17,7 +17,7 @@ export default function RightBarSuggestions({ data }) {
         style={{ paddingBottom: 8, paddingTop: 8 }}
       >
         {data.map((item) => {
-          return <SuggestionItem data={item} />;
+          return <SuggestionItem data={item} key={item.username} />;
         })}
       </div>
     </div>

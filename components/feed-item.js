@@ -31,6 +31,7 @@ export default function FeedItem({ data }) {
       {data.popularComments.map((item) => {
         return (
           <FeedItemComment
+            key={item.username}
             data={{ username: item.username, description: item.description }}
           />
         );
