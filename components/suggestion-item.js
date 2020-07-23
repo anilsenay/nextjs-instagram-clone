@@ -16,7 +16,7 @@ export default function SuggestionItem({ data }) {
           {data?.info || "Followed by username + 99 more"}
         </span>
       </div>
-      <div className="follow-button text-12-bold flex items-center ml-auto text-blue">
+      <div className="follow-button text-12-bold flex items-center ml-auto text-blue cursor-pointer">
         Follow
       </div>
     </div>

@@ -166,6 +166,8 @@ body {
   max-width: 614px;
   margin-bottom: 60px;
   line-height: 24px;
+  overflow: hidden;
+  position: relative;
 }
 .feed-item-header {
   height: 60px;
@@ -252,6 +254,25 @@ body {
 }
 .suggestion-user-info {
   margin-left: 12px;
+}
+
+.feed-photo-images-container {
+  width: 100%;
+}
+.hide-photo {
+  position: absolute;
+  overflow: hidden;
+}
+.slide-dots {
+  left: 50%;
+  bottom: -20px;
+}
+.slide-dot {
+  height: 6px;
+  width: 6px;
+  background-color: #a8a8a8;
+  border-radius: 6px;
+  margin-right: 4px;
 }
 
 @media only screen and (max-width: 614px) {
