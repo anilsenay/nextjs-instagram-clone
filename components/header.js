@@ -52,17 +52,21 @@ export default function Header({ user }) {
           <img src="../static/images/logo.png" className="header-logo" />
         </Clickable>
         <SearchBar />
-        <div className="header-icons flex ml-auto">
+        <div className="header-icons flex ml-auto items-center">
           <Clickable href="/">{home}</Clickable>
           <Clickable href="/messages">{messages}</Clickable>
           <Clickable href="/explore">{explore}</Clickable>
           <Clickable href="/activity">{activity}</Clickable>
           <ProfilePic
             className={
-              loginUserData.username === user && "header-profile-pic-border"
+              loginUserData.username === user ? "header-profile-pic-border" : ""
             }
             src={loginUserData?.image}
             username={loginUserData?.username}
+            style={{
+              padding: loginUserData.username === user ? "2px" : "3px",
+              marginLeft: "-2px",
+            }}
             size={22}
           />
         </div>
