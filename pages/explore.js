@@ -1,5 +1,10 @@
 import React from "react";
+import Layout from "../components/layout";
 
 export default function Explore() {
-  return <div>Explore</div>;
+  return (
+    <Layout>
+      <div>Explore</div>
+    </Layout>
+  );
 }
