@@ -21,7 +21,7 @@
 </ul>
 
 <p>
-  This is a instagram clone example but only homepage. I set up links for other pages but designing them is meaningless. The data is static, not fetching from any api. You can edit the content data from /static/example_data.js and logged user data is in atom's default value, you can edit them from /atoms/globalState.js
+  This is a mobile responsive instagram clone example but only homepage. I set up links for other pages but designing them is meaningless. The data is static, not fetching from any api. You can edit the content data from /static/example_data.js and logged user data is in atom's default value, you can edit them from /atoms/globalState.js
   <br><br>
   I used <a href="https://vercel.com/">vercel.com</a> for building project.
   <br><br>
