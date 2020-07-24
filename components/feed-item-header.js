@@ -3,7 +3,7 @@ import ProfilePic from "./profile_pic";
 import MoreSettings from "./icons/more_icon";
 import UsernameText from "./username-text";
 
-export default function FeedItemHeader({ username, image }) {
+export default function FeedItemHeader({ moreClickEvent, username, image }) {
   return (
     <div className="feed-item-header pl-4 pr-4 bg-white flex items-center">
       <ProfilePic src={image} size={32} username={username} />
@@ -12,7 +12,7 @@ export default function FeedItemHeader({ username, image }) {
         username={username || "username"}
       />
       <button className="ml-auto flex">
-        <MoreSettings />
+        <MoreSettings onClick={moreClickEvent} />
       </button>
     </div>
   );

@@ -3,12 +3,13 @@ import Stories from "../components/stories";
 import FeedItem from "../components/feed-item";
 import HomeRightBar from "../components/home-right-bar";
 import { data } from "../static/example_data";
+import Modal from "../components/modal";
+import MoreModalItems from "../components/more-modal";
 
 export default function Home() {
-  const feed = [1, 2, 3, 4, 5, 6, 7];
-
   return (
     <Layout user={data?.loginUser}>
+      <MoreModalItems />
       <div className="homepage-feed lg:mr-8 flex flex-col ">
         <Stories stories={data?.stories} />
         {data?.feed.map((item) => {

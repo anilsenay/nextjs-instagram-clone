@@ -6,11 +6,23 @@ import FeedItemComment from "./feed-item-comment";
 import AddComment from "./add_comment";
 import FeedItemPhotos from "./feed-item-photos";
 import Router from "next/router";
+import ModalStateHook from "../hooks/modal_hook";
 
 export default function FeedItem({ data }) {
+  const { showModal, setModal } = ModalStateHook();
+
+  const moreClickEvent = () => {
+    setModal(true, data);
+    console.log(showModal);
+  };
   return (
     <Box className="feed-item-container flex flex-col">
-      <FeedItemHeader image={data.user.image} username={data.user.username} />
+      <FeedItemHeader
+        image={data.user.image}
+        username={data.user.username}
+        data={data}
+        moreClickEvent={moreClickEvent}
+      />
       <FeedItemPhotos photos={data.photos} />
       <FeedItemButtons className="feed-item-buttons-container w-full h-10 pl-2 pr-2 mt-2 flex items-center" />
       <a href="#" className="feed-item-text text-14-bold mr-1 ml-4">
