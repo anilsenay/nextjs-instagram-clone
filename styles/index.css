@@ -108,6 +108,7 @@ body {
 }
 .stories-feed {
   scrollbar-width: none;
+  overflow: hidden;
 }
 
 .story-photo-container {
