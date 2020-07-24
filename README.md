@@ -27,5 +27,5 @@
   <br><br>
   Best thing of building with vercel like websites is that when you change anything, I mean push a new commit, it will be re-builded again and published. 
   <br><br>
-  <b>Note:</b> Somehow, photo slide is not working well as it is in localhost. You need to go next photo and come back to fix it. I will not work on cause of the problem as this is already an example project and already spent 2 days on this. But I am open for pull requests ^^
+  <b>Note:</b> Somehow, photo slide is not working well as it is in localhost. You need to go next photo and come back to fix it. And sometimes stories' arrow buttons do not rendering, you should refresh page. I will not work on cause of problems as this is already an example project and already spent 2 days on this. But I am open for pull requests ^^
 </p>
