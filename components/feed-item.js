@@ -13,7 +13,6 @@ export default function FeedItem({ data }) {
 
   const moreClickEvent = () => {
     setModal(true, data);
-    console.log(showModal);
   };
   return (
     <Box className="feed-item-container flex flex-col">

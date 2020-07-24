@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import ModalStateHook from "../hooks/modal_hook";
 
 export default function Modal({ children }) {
-  const { showModal, setModal } = ModalStateHook();
+  const { showModal, modalData, setModal } = ModalStateHook();
   return (
     <div
       className={`modal-container flex items-center justify-center ${
@@ -10,7 +10,7 @@ export default function Modal({ children }) {
       }`}
       onClick={() => setModal(false)}
     >
-      <div className="modal-box relative">{children}</div>
+      <div className="modal-box relative mx-6">{children}</div>
     </div>
   );
 }
