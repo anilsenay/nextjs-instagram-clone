@@ -12,6 +12,7 @@ export default function StoryItem({ data }) {
       <div className={"story-photo-container"}>
         <ProfilePic
           src={data?.image || "https://picsum.photos/seed/picsum/200/200"}
+          username={data?.username}
           size={56}
           border
         ></ProfilePic>

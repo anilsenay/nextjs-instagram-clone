@@ -7,7 +7,7 @@ export default function Pid() {
   const { pid } = router.query;
 
   return (
-    <Layout>
+    <Layout user={pid}>
       <div>{pid}</div>
     </Layout>
   );

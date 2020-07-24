@@ -10,6 +10,7 @@ import { useLoginUserData } from "../hooks/global_hook";
 
 export default function Header({ user }) {
   const loginUserData = useLoginUserData();
+
   return (
     <nav className="navigation fixed z-20 top-0">
       <div className="header-container">
@@ -31,6 +32,9 @@ export default function Header({ user }) {
             <ActivityIcon className="header-icon" />
           </Clickable>
           <ProfilePic
+            className={
+              loginUserData.username === user && "header-profile-pic-border"
+            }
             src={loginUserData?.image}
             username={loginUserData?.username}
             size={22}
