@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import StoryItem from "./story-item";
 import Box from "./box";
+import ArrowButton from "./arrow_button";
 
 export default function Stories({ stories }) {
   const [x, setX] = useState(0);
@@ -30,12 +31,11 @@ export default function Stories({ stories }) {
         ref={windowRef}
       >
         {x !== 0 && (
-          <button
-            className="stories-button left-0 z-10"
+          <ArrowButton
+            place="left"
+            text="<"
             onClick={() => calculateTransform(x + 320)}
-          >
-            {"<"}
-          </button>
+          />
         )}
         <div
           className="stories-feed-floating flex relative transition ease-linear duration-300"
@@ -46,12 +46,11 @@ export default function Stories({ stories }) {
           })}
         </div>
         {x !== min_X && stories.length > maxItems && (
-          <button
-            className=" stories-button right-0 z-10"
+          <ArrowButton
+            place="right"
+            text=">"
             onClick={() => calculateTransform(x - 320)}
-          >
-            {">"}
-          </button>
+          />
         )}
       </div>
     </Box>

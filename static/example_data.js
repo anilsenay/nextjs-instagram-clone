@@ -134,7 +134,7 @@ export const data = {
       image: "https://picsum.photos/id/247/200/200",
     },
     {
-      username: "anilsenay",
+      username: "anilsenayyyy",
       image: "https://picsum.photos/id/257/200/200",
     },
     {
@@ -148,6 +148,14 @@ export const data = {
     {
       username: "anilsenay3",
       image: "https://picsum.photos/id/266/200/200",
+    },
+    {
+      username: "anilsenay4",
+      image: "https://picsum.photos/id/261/200/200",
+    },
+    {
+      username: "anilsenay5",
+      image: "https://picsum.photos/id/260/200/200",
     },
   ],
   suggestions: [

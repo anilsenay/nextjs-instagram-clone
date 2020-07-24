@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import ArrowButton from "./arrow_button";
 
 export default function FeedItemPhotos({ photos }) {
   const photoRef = useRef(0);
@@ -22,15 +23,14 @@ export default function FeedItemPhotos({ photos }) {
   return (
     <div className="feed-photo-container flex relative items-center">
       {photosX !== 0 && (
-        <button
-          className="stories-button left-0 z-10"
+        <ArrowButton
+          place="left"
+          text="<"
           onClick={() => {
             slideButtonEvent(photosX + photoRef.current.width + 2);
             setSelectedPhoto(selectedPhoto - 1);
           }}
-        >
-          {"<"}
-        </button>
+        />
       )}
       <div
         className="feed-photo-images-container w-full flex relative transition ease-linear duration-200"
@@ -61,15 +61,14 @@ export default function FeedItemPhotos({ photos }) {
           })}
       </div>
       {photosX !== min_x && (
-        <button
-          className="stories-button right-0 z-10"
+        <ArrowButton
+          place="right"
+          text=">"
           onClick={() => {
             slideButtonEvent(photosX - photoRef.current.width - 2);
             setSelectedPhoto(selectedPhoto + 1);
           }}
-        >
-          {">"}
-        </button>
+        />
       )}
       {photos.length > 1 && (
         <div className="slide-dots absolute flex">

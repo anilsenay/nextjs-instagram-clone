@@ -5,7 +5,9 @@ import { loginUser } from "../atoms/globalState";
 function useLoginUserData() {
   const [loginUserData, setLoginUserData] = useRecoilState(loginUser);
 
-  return loginUserData;
+  const data = loginUserData;
+
+  return data;
 }
 function setLoginUser(x) {
   const [loginUserData, setLoginUserData] = useRecoilState(loginUser);
