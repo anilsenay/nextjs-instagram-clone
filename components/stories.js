@@ -6,17 +6,20 @@ import ArrowButton from "./arrow_button";
 export default function Stories({ stories }) {
   const [x, setX] = useState(0);
   const [maxItems, setMaxItems] = useState(7);
-
-  const min_X = -(
-    (parseInt(stories.length) - maxItems) * 80 +
-    (5 - maxItems) * 15
-  );
+  const [min_X, setMinX] = useState(0);
 
   const windowRef = useRef(null);
 
   useEffect(() => {
-    setMaxItems(parseInt(windowRef.current.clientWidth / 80));
-  }, [windowRef]);
+    if (windowRef.current.clientWidth > 0) {
+
+      ((windowRef.current.clientWidth / 80) | 0) !== maxItems &&
+        ((windowRef.current.clientWidth / 80) | 0) <= 7 &&
+        setMaxItems((windowRef.current.clientWidth / 80) | 0);
+
+      setMinX(-((stories.length - maxItems) * 80 + (5 - maxItems) * 15));
+    }
+  });
 
   const calculateTransform = (newX) => {
     if (newX < min_X) setX(min_X);
