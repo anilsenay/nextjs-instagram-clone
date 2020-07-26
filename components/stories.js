@@ -19,8 +19,7 @@ export default function Stories({ stories }) {
     (5 - maxItems) * 15)
   }, [maxItems]);
 
-  const calculateTransform = (value) => {
-    const newX = x + (value);
+  const calculateTransform = (newX) => {
     if (newX < min_X) setX(min_X);
     else if (newX > 0) setX(0);
     else setX(newX);
@@ -36,7 +35,7 @@ export default function Stories({ stories }) {
           <ArrowButton
             place="left"
             text="<"
-            onClick={() => calculateTransform(320)}
+            onClick={() => calculateTransform(x + 320)}
           />
         )}
         <div
@@ -51,7 +50,7 @@ export default function Stories({ stories }) {
           <ArrowButton
             place="right"
             text=">"
-            onClick={() => calculateTransform(-320)}
+            onClick={() => calculateTransform(x - 320)}
           />
         )}
       </div>
