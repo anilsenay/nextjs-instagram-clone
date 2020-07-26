@@ -8,11 +8,6 @@ export default function Stories({ stories }) {
   const [maxItems, setMaxItems] = useState(7);
   const [min_X, setMinX] = useState(0);
   
-  const min_X = -(
-    (parseInt(stories.length) - maxItems) * 80 +
-    (5 - maxItems) * 15
-  );
-
   const windowRef = useRef(null);
 
   useEffect(() => {
