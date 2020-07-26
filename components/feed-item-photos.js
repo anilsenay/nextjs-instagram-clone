@@ -7,12 +7,19 @@ export default function FeedItemPhotos({ photos }) {
   const [photosX, setPhotosX] = useState(0);
   const [refLoaded, setRefLoaded] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(0);
+  const [min_x, setMinX] = useState(
+    -((photoRef.current.width + 2) * (photos.length - 1))
+  );
 
   useEffect(() => {
     if (photoRef) setRefLoaded(true);
   }, [photoRef]);
 
-  const min_x = -((photoRef.current.width + 2) * (photos.length - 1));
+  useEffect(() => {
+    if (photoRef.current.width > 0)
+      setMinX(-((photoRef.current.width + 2) * (photos.length - 1)));
+    console.log(photoRef.current.width);
+  });
 
   const slideButtonEvent = (x) => {
     if (x < min_x) setPhotosX(min_x);
@@ -60,7 +67,7 @@ export default function FeedItemPhotos({ photos }) {
             );
           })}
       </div>
-      {photosX !== min_x && (
+      {photosX !== min_x && photos.length > 1 && (
         <ArrowButton
           place="right"
           text=">"
