@@ -1,18 +1,14 @@
-import React from "react";
-import { useRecoilState } from "recoil";
 import { loginUser } from "../atoms/globalState";
 
-function useLoginUserData() {
+import { useRecoilState } from "recoil";
+
+const LoginUserHook = () => {
   const [loginUserData, setLoginUserData] = useRecoilState(loginUser);
 
-  const data = loginUserData;
+  const { data } = loginUserData;
+  const setLoginUser = (newData) => setLoginUserData({ data: newData });
 
-  return data;
-}
-function setLoginUser(x) {
-  const [loginUserData, setLoginUserData] = useRecoilState(loginUser);
+  return { data, setLoginUser };
+};
 
-  setLoginUserData(x);
-}
-
-export { useLoginUserData, setLoginUser };
+export default LoginUserHook;
