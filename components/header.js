@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { useRouter } from "next/router";
 
 import SearchBar from "./search_bar";
@@ -13,7 +13,7 @@ import ActivityIconActive from "./icons/activity_icon_active";
 import ProfilePic from "./profile_pic";
 import Clickable from "./clickable";
 
-import { useLoginUserData } from "../hooks/global_hook";
+import LoginUserHook from "../hooks/global_hook";
 
 export default function Header({ user }) {
   const router = useRouter();
@@ -44,7 +44,9 @@ export default function Header({ user }) {
       <ActivityIcon className="header-icon" />
     );
 
-  const loginUserData = useLoginUserData();
+  const { data, setLoginUser } = LoginUserHook();
+  const loginUserData = data;
+
   return (
     <nav className="navigation fixed z-20 top-0">
       <div className="header-container">
@@ -57,18 +59,22 @@ export default function Header({ user }) {
           <Clickable href="/messages">{messages}</Clickable>
           <Clickable href="/explore">{explore}</Clickable>
           <Clickable href="/activity">{activity}</Clickable>
-          <ProfilePic
-            className={
-              loginUserData.username === user ? "header-profile-pic-border" : ""
-            }
-            src={loginUserData?.image}
-            username={loginUserData?.username}
-            style={{
-              padding: loginUserData.username === user ? "2px" : "3px",
-              marginLeft: "-2px",
-            }}
-            size={22}
-          />
+          {user && (
+            <ProfilePic
+              className={
+                loginUserData.username === user
+                  ? "header-profile-pic-border"
+                  : ""
+              }
+              src={loginUserData?.image}
+              username={loginUserData?.username}
+              style={{
+                padding: loginUserData.username === user ? "2px" : "3px",
+                marginLeft: "-2px",
+              }}
+              size={22}
+            />
+          )}
         </div>
       </div>
     </nav>

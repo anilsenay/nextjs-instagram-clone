@@ -12,12 +12,11 @@ export default function Stories({ stories }) {
 
   useEffect(() => {
     if (windowRef.current.clientWidth > 0) {
-
       ((windowRef.current.clientWidth / 80) | 0) !== maxItems &&
         ((windowRef.current.clientWidth / 80) | 0) <= 7 &&
         setMaxItems((windowRef.current.clientWidth / 80) | 0);
 
-      setMinX(-((stories.length - maxItems) * 80 + (5 - maxItems) * 15));
+      setMinX(-((stories?.length - maxItems) * 80 + (5 - maxItems) * 15));
     }
   });
 
@@ -44,11 +43,12 @@ export default function Stories({ stories }) {
           className="stories-feed-floating flex relative transition ease-linear duration-300"
           style={{ transform: `translate(${x}px, 0px)` }}
         >
-          {stories.map((item) => {
-            return <StoryItem data={item} key={item.username} />;
-          })}
+          {stories &&
+            stories.map((item) => {
+              return <StoryItem data={item} key={item.username} />;
+            })}
         </div>
-        {x !== min_X && stories.length > maxItems && (
+        {x !== min_X && stories?.length > maxItems && (
           <ArrowButton
             place="right"
             text=">"
