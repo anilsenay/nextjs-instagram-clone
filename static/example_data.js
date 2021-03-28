@@ -3,7 +3,7 @@ export const data = {
     username: "anilsenay",
     name: "Anıl Şenay",
     image:
-      "https://instagram.fesb3-1.fna.fbcdn.net/v/t51.2885-19/s150x150/88129994_218553312873090_187843388282765312_n.jpg?_nc_ht=instagram.fesb3-1.fna.fbcdn.net&_nc_ohc=cGF3p8aAuGMAX_59ZLm&oh=ffcc4ae06bd0aca447d0d5f6fb906b7d&oe=5FA164CA",
+      "https://i.ibb.co/p3n8jKV/88129994-218553312873090-187843388282765312-n.jpg",
   },
   feed: [
     {
